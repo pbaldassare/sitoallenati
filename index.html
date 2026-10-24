@@ -60,6 +60,12 @@
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7-9.5-9.7zm12.3 6.9L5 2.4l11 6.3-.1.5zM5 21.6l10.9-6.8.1.4L5 21.6zm12.6-9.6l-2.7-1.6-2.9 2.9 2.9 2.9 2.7-1.6c.9-.5.9-2.1 0-2.6z"/></svg>Android</li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web</li>
         </ul>
+        <div class="feed" id="feed" aria-live="polite">
+          <span class="feed__dot"></span>
+          <span class="feed__avatar" id="feed-avatar">M</span>
+          <span class="feed__text"><b id="feed-title">Nuovo iscritto</b><span id="feed-msg">Marta F. si è iscritta a CrossBox Milano</span></span>
+          <span class="feed__tag">esempio</span>
+        </div>
       </div>
 
       <div class="hero__visual" aria-hidden="true">
@@ -340,18 +346,6 @@
     <small>© <span id="year"></span> Allenati.me</small>
   </div>
 </footer>
-
-<div class="toast" id="toast" role="status" aria-live="polite" hidden>
-  <span class="toast__avatar" id="toast-avatar"></span>
-  <div class="toast__body">
-    <b id="toast-title"></b>
-    <span id="toast-text"></span>
-  </div>
-  <span class="toast__tag">Esempio dall'app</span>
-  <button class="toast__close" type="button" id="toast-close" aria-label="Chiudi">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-  </button>
-</div>
 
 <script src="script.js" defer></script>
 </body>

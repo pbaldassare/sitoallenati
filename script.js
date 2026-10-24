@@ -110,53 +110,38 @@
     });
   }
 
-  // Toast di esempio: ogni tanto compare una notifica come quelle che riceve il gestore
-  var toast = document.getElementById('toast');
-  if (toast && !reduce) {
-    var tAvatar = document.getElementById('toast-avatar');
-    var tTitle = document.getElementById('toast-title');
-    var tText = document.getElementById('toast-text');
+  // Riga di attività: messaggi di esempio che si alternano ogni pochi secondi
+  var feed = document.getElementById('feed');
+  if (feed) {
+    var fAvatar = document.getElementById('feed-avatar');
+    var fTitle = document.getElementById('feed-title');
+    var fMsg = document.getElementById('feed-msg');
     var events = [
-      { k: 'new', i: 'MF', t: 'Nuovo iscritto', s: 'Marta F. si è iscritta a CrossBox Milano' },
-      { k: 'book', i: 'LB', t: 'Nuova prenotazione', s: 'Luca B. ha prenotato Functional training · 18:00' },
-      { k: 'pay', i: 'GR', t: 'Abbonamento attivato', s: 'Giulia R. · Mensile illimitato · 49,00 €' },
-      { k: 'ok', i: 'AC', t: 'Posto liberato', s: 'Andrea C. è entrato in Boxe 19:00 dalla lista d\'attesa' },
-      { k: 'new', i: 'SM', t: 'Nuovo iscritto', s: 'Sara M. si è iscritta a Fit Lab Torino' },
-      { k: 'pay', i: '10', t: 'Pagamento ricevuto', s: 'Pacchetto 10 crediti · 90,00 €' },
-      { k: 'book', i: 'DP', t: 'Nuova prenotazione', s: 'Davide P. ha prenotato Yoga flow · 20:00' },
-      { k: 'ok', i: 'EV', t: 'Certificato caricato', s: 'Elena V. · certificato medico valido fino a marzo' },
-      { k: 'new', i: 'FT', t: 'Nuovo iscritto', s: 'Francesco T. si è iscritto a Arena Fitness Roma' }
+      { k: 'new', t: 'Nuovo iscritto', s: 'Marta F. si è iscritta a CrossBox Milano' },
+      { k: 'book', t: 'Nuova prenotazione', s: 'Luca B. ha prenotato Functional training · 18:00' },
+      { k: 'pay', t: 'Abbonamento attivato', s: 'Giulia R. · Mensile illimitato' },
+      { k: 'ok', t: 'Posto liberato', s: 'Andrea C. è entrato in Boxe 19:00 dalla lista d\'attesa' },
+      { k: 'new', t: 'Nuovo iscritto', s: 'Sara M. si è iscritta a Fit Lab Torino' },
+      { k: 'pay', t: 'Pagamento ricevuto', s: 'Paolo G. · pacchetto 10 crediti' },
+      { k: 'book', t: 'Nuova prenotazione', s: 'Davide P. ha prenotato Yoga flow · 20:00' },
+      { k: 'ok', t: 'Certificato caricato', s: 'Elena V. · certificato medico valido fino a marzo' },
+      { k: 'new', t: 'Nuovo iscritto', s: 'Francesco T. si è iscritto a Arena Fitness Roma' }
     ];
-    var order = events.slice().sort(function () { return Math.random() - .5; });
-    var idx = 0, shown = 0, maxShown = 6, hideTimer = null, nextTimer = null, closed = false;
-
-    function hideToast() {
-      toast.classList.remove('is-on');
-      setTimeout(function () { if (!toast.classList.contains('is-on')) toast.hidden = true; }, 500);
+    var fi = 0;
+    function setFeed(e) {
+      fAvatar.textContent = e.s.charAt(0);
+      fAvatar.className = 'feed__avatar' + (e.k === 'ok' ? ' is-ok' : e.k === 'pay' ? ' is-pay' : '');
+      fTitle.textContent = e.t;
+      fMsg.textContent = e.s;
     }
-    function showToast() {
-      if (closed || document.hidden || shown >= maxShown) return schedule();
-      var e = order[idx++ % order.length];
-      tAvatar.textContent = e.i;
-      tAvatar.className = 'toast__avatar' + (e.k === 'ok' ? ' is-ok' : e.k === 'pay' ? ' is-pay' : '');
-      tTitle.textContent = e.t;
-      tText.textContent = e.s;
-      toast.hidden = false;
-      setTimeout(function () { toast.classList.add('is-on'); }, 30);
-      shown++;
-      clearTimeout(hideTimer);
-      hideTimer = setTimeout(hideToast, 6000);
-      schedule();
+    function nextFeed() {
+      if (document.hidden) return;
+      fi = (fi + 1) % events.length;
+      if (reduce) return setFeed(events[fi]);
+      feed.classList.add('is-swap');
+      setTimeout(function () { setFeed(events[fi]); feed.classList.remove('is-swap'); }, 380);
     }
-    function schedule() {
-      clearTimeout(nextTimer);
-      if (closed || shown >= maxShown) return;
-      nextTimer = setTimeout(showToast, 14000 + Math.random() * 10000);
-    }
-    document.getElementById('toast-close').addEventListener('click', function () {
-      closed = true; clearTimeout(nextTimer); hideToast();
-    });
-    nextTimer = setTimeout(showToast, 7000);
+    setInterval(nextFeed, 6500);
   }
 
   // Anno nel footer
