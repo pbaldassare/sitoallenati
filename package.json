@@ -1,0 +1,9 @@
+{
+  "name": "sitoallenati",
+  "private": true,
+  "description": "Landing page di Allenati.me: sito statico, nessuna build.",
+  "scripts": {
+    "build": "echo 'Sito statico: niente da costruire, la cartella di output è la radice del repo.'",
+    "start": "python3 -m http.server 8765"
+  }
+}
