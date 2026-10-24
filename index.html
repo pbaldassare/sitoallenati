@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Allenati — L'app della tua palestra</title>
+  <meta name="description" content="Allenati è l'app con cui gli iscritti della tua palestra prenotano le lezioni, pagano e gestiscono gli abbonamenti dal telefono. Tu gestisci tutto da una dashboard.">
+  <meta property="og:title" content="Allenati — L'app della tua palestra">
+  <meta property="og:description" content="Prenotazioni, crediti, abbonamenti e notifiche push. iOS, Android e web.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/icon-512.webp">
+  <meta name="theme-color" content="#0b0b0d">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/icon-192.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#funzioni">Vai al contenuto</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Allenati, torna all'inizio">
+      <img src="assets/logo-tile.png" alt="" width="36" height="36">
+      <span>Allenati</span>
+    </a>
+    <nav class="nav__links" id="menu" aria-label="Sezioni del sito">
+      <a href="#funzioni">Funzioni</a>
+      <a href="#ruoli">Per chi</a>
+      <a href="#come">Come funziona</a>
+      <a href="#app">Scarica l'app</a>
+      <a class="btn btn--sm btn--red" href="#contatti">Richiedi una demo</a>
+    </nav>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div class="hero__copy">
+        <p class="eyebrow">App per palestre e centri fitness</p>
+        <h1>La tua palestra,<br>in tasca ai tuoi iscritti.</h1>
+        <p class="lead">Con Allenati gli iscritti prenotano le lezioni, pagano e gestiscono gli abbonamenti dal telefono. Tu gestisci tutto da un'unica dashboard, da qualsiasi sede.</p>
+        <div class="hero__cta">
+          <a class="btn btn--red" href="#contatti">Richiedi una demo</a>
+          <a class="btn btn--ghost" href="#app">Sei un iscritto? Scarica l'app</a>
+        </div>
+        <ul class="hero__proof" aria-label="Piattaforme">
+          <li>iOS</li><li>Android</li><li>Web</li>
+        </ul>
+      </div>
+
+      <div class="hero__phone" aria-hidden="true">
+        <div class="phone">
+          <div class="phone__notch"></div>
+          <div class="phone__screen">
+            <div class="app__top">
+              <div>
+                <div class="app__hi">Ciao, Marta</div>
+                <div class="app__gym">CrossBox Milano</div>
+              </div>
+              <div class="app__credits">12 crediti</div>
+            </div>
+            <div class="app__days">
+              <span>Lun<b>13</b></span><span>Mar<b>14</b></span><span class="is-on">Mer<b>15</b></span><span>Gio<b>16</b></span><span>Ven<b>17</b></span>
+            </div>
+            <div class="app__label">Oggi · 3 lezioni</div>
+            <div class="app__card">
+              <div class="app__time">18:00</div>
+              <div class="app__info"><b>Functional training</b><span>Sala 1 · Luca · 4 posti</span></div>
+              <div class="app__btn">Prenota</div>
+            </div>
+            <div class="app__card">
+              <div class="app__time">19:00</div>
+              <div class="app__info"><b>Boxe</b><span>Sala 2 · Giorgia · pieno</span></div>
+              <div class="app__btn app__btn--wait">Lista d'attesa</div>
+            </div>
+            <div class="app__card is-booked">
+              <div class="app__time">20:00</div>
+              <div class="app__info"><b>Yoga flow</b><span>Sala 3 · Sara</span></div>
+              <div class="app__btn app__btn--ok">Prenotato</div>
+            </div>
+            <div class="app__push">
+              <img src="assets/logo-tile.png" alt="" width="22" height="22">
+              <div><b>Promemoria</b><span>Yoga flow tra 2 ore · Sala 3</span></div>
+            </div>
+            <div class="app__nav">
+              <span class="is-on"></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMERI -->
+  <section class="stats" aria-label="Allenati in numeri">
+    <div class="wrap stats__in">
+      <div><strong>9</strong><span>palestre attive</span></div>
+      <div><strong>500<sup>+</sup></strong><span>iscritti registrati</span></div>
+      <div><strong>25.000<sup>+</sup></strong><span>prenotazioni gestite</span></div>
+      <div><strong>6</strong><span>notifiche automatiche</span></div>
+    </div>
+  </section>
+
+  <!-- FUNZIONI -->
+  <section class="section" id="funzioni">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow">Funzioni</p>
+        <h2>Tutto quello che serve a una palestra, senza fogli Excel.</h2>
+        <p class="lead">Ogni regola vive nel sistema, non nel telefono: limiti, permessi e pagamenti valgono per tutti, sempre.</p>
+      </div>
+
+      <div class="grid feats">
+        <article class="feat reveal">
+          <div class="feat__ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg></div>
+          <h3>Prenotazioni intelligenti</h3>
+          <p>Calendario, prenotazione in un tocco, lista d'attesa automatica con rimborso del credito, disdetta entro il termine e promemoria 2 ore prima.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
+          <h3>Crediti e abbonamenti</h3>
+          <p>Pacchetti di crediti, abbonamenti mensili, trimestrali e annuali, piani ibridi. Limite di lezioni a settimana per piano e piani nascosti ma attivi.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__ico"><svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Pagamenti in app</h3>
+          <p>Ogni palestra incassa sul proprio account Stripe. Ricevute generate in automatico, riconciliazione dei pagamenti in sospeso.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+          <h3>Multipalestra</h3>
+          <p>Più sedi, una dashboard. Gli iscritti usano i crediti in tutte le palestre del gruppo e tu vedi corsi, istruttori e incassi per sede.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__ico"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+          <h3>Notifiche push</h3>
+          <p>Promemoria lezione, scadenza abbonamento a 7 e a 1 giorno, iscrizioni e disdette all'istruttore, lezione chiusa. Più le comunicazioni che scrivi tu.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Automazioni per lo staff</h3>
+          <p>Le lezioni senza iscritti si chiudono da sole 2 ore prima: l'istruttore non si presenta a vuoto. Posti ricalcolati, ore lavorate conteggiate.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+          <h3>Gestione clienti</h3>
+          <p>Ricerca per nome, email o telefono. Export Excel della lista. Certificati medici con scadenza, documenti della palestra, chat con gli iscritti.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
+          <h3>Report e analisi</h3>
+          <p>Prenotazioni, presenze e incassi per sede, corso e istruttore. Sai quali lezioni funzionano e quali no.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUOLI -->
+  <section class="section section--paper" id="ruoli">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow">Per chi</p>
+        <h2>Tre app in una.</h2>
+        <p class="lead">Lo stesso accesso, tre esperienze diverse. Ognuno vede solo quello che gli serve.</p>
+      </div>
+      <div class="grid roles">
+        <article class="role reveal">
+          <span class="role__n">01</span>
+          <h3>Iscritto</h3>
+          <ul>
+            <li>Calendario e prenotazioni</li>
+            <li>Lista d'attesa e storico</li>
+            <li>Crediti, abbonamenti, shop</li>
+            <li>Certificato medico</li>
+            <li>Chat con la palestra</li>
+          </ul>
+        </article>
+        <article class="role reveal">
+          <span class="role__n">02</span>
+          <h3>Istruttore</h3>
+          <ul>
+            <li>I suoi corsi e il calendario</li>
+            <li>Partecipanti per lezione</li>
+            <li>Avvisi su iscrizioni e disdette</li>
+            <li>Lezioni chiuse in automatico</li>
+          </ul>
+        </article>
+        <article class="role reveal role--red">
+          <span class="role__n">03</span>
+          <h3>Titolare</h3>
+          <ul>
+            <li>Corsi, orari, sale, istruttori</li>
+            <li>Iscritti, piani e abbonamenti</li>
+            <li>Incassi Stripe e ricevute</li>
+            <li>Report e comunicazioni</li>
+            <li>Più sedi da una dashboard</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COME FUNZIONA -->
+  <section class="section" id="come">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow">Come funziona</p>
+        <h2>Online in pochi giorni.</h2>
+      </div>
+      <ol class="steps">
+        <li class="reveal">
+          <span class="steps__n">1</span>
+          <h3>Ci racconti la palestra</h3>
+          <p>Corsi, sale, istruttori, piani e prezzi. Una chiamata basta.</p>
+        </li>
+        <li class="reveal">
+          <span class="steps__n">2</span>
+          <h3>Configuriamo tutto noi</h3>
+          <p>Calendario, piani, account Stripe, notifiche. Tu controlli e approvi.</p>
+        </li>
+        <li class="reveal">
+          <span class="steps__n">3</span>
+          <h3>I tuoi iscritti scaricano l'app</h3>
+          <p>Si registrano, scelgono la palestra e prenotano la prima lezione.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- APP -->
+  <section class="band" id="app">
+    <div class="wrap band__in">
+      <img class="band__icon" src="assets/logo-tile.png" alt="Icona dell'app Allenati" width="88" height="88">
+      <div class="band__copy">
+        <h2>Sei iscritto a una palestra che usa Allenati?</h2>
+        <p>Scarica l'app, registrati e prenota la prossima lezione.</p>
+      </div>
+      <div class="stores">
+        <a class="store" href="#" data-store="ios" aria-label="Scarica su App Store">
+          <svg viewBox="0 0 24 24"><path d="M16.4 12.8c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9C6 7 4.3 8 3.4 9.6c-2 3.4-.5 8.5 1.4 11.3.9 1.4 2.1 2.9 3.5 2.8 1.4-.1 2-.9 3.7-.9s2.2.9 3.7.9c1.5 0 2.5-1.4 3.4-2.8 1.1-1.6 1.5-3.1 1.5-3.2-.1 0-2.2-.9-2.2-4.9zM13.9 5.2c.7-.9 1.2-2.1 1.1-3.3-1.1 0-2.3.7-3.1 1.6-.7.8-1.3 2-1.1 3.2 1.2.1 2.4-.6 3.1-1.5z"/></svg>
+          <span><small>Scarica su</small>App Store</span>
+        </a>
+        <a class="store" href="#" data-store="android" aria-label="Disponibile su Google Play">
+          <svg viewBox="0 0 24 24"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7-9.5-9.7zm12.3 6.9L5 2.4l11 6.3-.1.5zM5 21.6l10.9-6.8.1.4L5 21.6zm12.6-9.6l-2.7-1.6-2.9 2.9 2.9 2.9 2.7-1.6c.9-.5.9-2.1 0-2.6z"/></svg>
+          <span><small>Disponibile su</small>Google Play</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="section section--paper" id="contatti">
+    <div class="wrap contact">
+      <div class="contact__copy">
+        <p class="eyebrow">Contatti</p>
+        <h2>Vuoi vederla in azione?</h2>
+        <p class="lead">Scrivici: ti mostriamo Allenati con i dati di una palestra vera e capiamo insieme se fa per te.</p>
+        <a class="contact__mail" href="mailto:info@allenati.me">info@allenati.me</a>
+      </div>
+      <form class="form" id="form" novalidate>
+        <div class="form__row">
+          <label for="f-nome">Nome e cognome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+        </div>
+        <div class="form__row">
+          <label for="f-palestra">Palestra</label>
+          <input id="f-palestra" name="palestra" type="text" autocomplete="organization" required>
+        </div>
+        <div class="form__row">
+          <label for="f-email">La tua email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+        </div>
+        <div class="form__row">
+          <label for="f-msg">Messaggio <span class="opt">(facoltativo)</span></label>
+          <textarea id="f-msg" name="messaggio" rows="3"></textarea>
+        </div>
+        <p class="form__err" id="form-err" role="alert" hidden>Compila nome, palestra e un'email valida.</p>
+        <button class="btn btn--red btn--block" type="submit">Richiedi una demo</button>
+        <p class="form__note">Si apre il tuo programma di posta con il messaggio già pronto per info@allenati.me.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="brand" href="#top">
+      <img src="assets/logo-tile.png" alt="" width="28" height="28">
+      <span>Allenati</span>
+    </a>
+    <p>App per palestre e centri fitness. iOS, Android e web.</p>
+    <nav aria-label="Link utili">
+      <a href="mailto:info@allenati.me">info@allenati.me</a>
+      <a href="https://allenati.me/privacy">Privacy</a>
+    </nav>
+    <small>© <span id="year"></span> Allenati.me</small>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
