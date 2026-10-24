@@ -5,7 +5,7 @@ const path = require('path');
 
 const root = __dirname;
 const out = path.join(root, 'dist');
-const include = ['index.html', 'styles.css', 'script.js', 'favicon.ico', 'assets'];
+const include = ['index.html', 'styles.css', 'script.js', 'favicon.ico', 'assets', 'sitemap.xml', 'robots.txt'];
 
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out);

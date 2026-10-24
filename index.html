@@ -8,7 +8,16 @@
   <meta property="og:title" content="Allenati — L'app della tua palestra">
   <meta property="og:description" content="Prenotazioni, crediti, abbonamenti e notifiche push. iOS, Android e web.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/icon-512.webp">
+  <meta property="og:image" content="https://sitoallenati.pages.dev/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://sitoallenati.pages.dev/">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://sitoallenati.pages.dev/">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Allenati","url":"https://allenati.me","applicationCategory":"HealthApplication","operatingSystem":"iOS, Android, Web","description":"App per palestre e centri fitness: prenotazioni, crediti, abbonamenti, pagamenti e notifiche push.","author":{"@type":"Organization","name":"Allenati.me","email":"info@allenati.me"}}
+  </script>
   <meta name="theme-color" content="#0a0b10">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="assets/icon-192.webp">
@@ -32,6 +41,7 @@
       <a href="#funzioni" data-spy="funzioni">Funzioni</a>
       <a href="#ruoli" data-spy="ruoli">Per chi</a>
       <a href="#come" data-spy="come">Come funziona</a>
+      <a href="#faq" data-spy="faq">Domande</a>
       <a href="#app" data-spy="app">Scarica l'app</a>
       <a class="btn btn--sm btn--brand" href="#contatti">Richiedi una demo</a>
     </nav>
@@ -248,6 +258,62 @@
     </div>
   </section>
 
+  <!-- TITOLARE -->
+  <section class="section section--dark" id="titolare">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="eyebrow">Per il titolare</p>
+        <h2>La palestra sotto controllo, da una pagina sola.</h2>
+        <p class="lead">Dalla dashboard vedi incassi, prenotazioni e presenze di ogni sede, corso e istruttore. E parli con tutti gli iscritti in un tocco.</p>
+      </div>
+      <div class="owner">
+        <div class="dash reveal" aria-hidden="true">
+          <div class="dash__top">
+            <div><b>Dashboard</b><span>CrossBox Milano · ottobre</span></div>
+            <span class="dash__btn">Invia comunicazione</span>
+          </div>
+          <div class="dash__kpis">
+            <div class="dash__kpi"><span>Incassi del mese</span><b>4.820 €</b><i class="is-up">+12%</i></div>
+            <div class="dash__kpi"><span>Prenotazioni</span><b>1.236</b><i class="is-up">+8%</i></div>
+            <div class="dash__kpi"><span>Presenze</span><b>91%</b><i>stabile</i></div>
+            <div class="dash__kpi"><span>Lezioni vuote chiuse</span><b>7</b><i>automatico</i></div>
+          </div>
+          <div class="dash__grid">
+            <div class="dash__chart">
+              <div class="dash__label">Prenotazioni per giorno</div>
+              <div class="dash__bars">
+                <span style="--h:55%"><i>Lun</i></span><span style="--h:70%"><i>Mar</i></span><span style="--h:62%"><i>Mer</i></span><span style="--h:88%"><i>Gio</i></span><span style="--h:76%"><i>Ven</i></span><span style="--h:40%"><i>Sab</i></span><span style="--h:18%"><i>Dom</i></span>
+              </div>
+            </div>
+            <div class="dash__list">
+              <div class="dash__label">Scadenze questa settimana</div>
+              <div class="dash__row"><span class="dash__av">M</span><div><b>Marta F.</b><span>Mensile · scade gio 16</span></div><em>avvisata</em></div>
+              <div class="dash__row"><span class="dash__av">L</span><div><b>Luca B.</b><span>10 crediti · 1 rimasto</span></div><em>avvisato</em></div>
+              <div class="dash__row"><span class="dash__av">G</span><div><b>Giulia R.</b><span>Trimestrale · scade sab 18</span></div><em class="is-new">rinnovato</em></div>
+            </div>
+          </div>
+        </div>
+        <ul class="benefits">
+          <li class="reveal">
+            <span class="benefits__ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span>
+            <h3>Vedi cosa funziona</h3>
+            <p>Presenze e incassi per corso, istruttore e sede. Scopri le lezioni che riempiono e quelle che restano vuote.</p>
+          </li>
+          <li class="reveal">
+            <span class="benefits__ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span>
+            <h3>Incassi sul tuo Stripe</h3>
+            <p>I pagamenti arrivano direttamente sul conto della palestra, con ricevuta automatica. Chi paga in sede lo attivi a mano.</p>
+          </li>
+          <li class="reveal">
+            <span class="benefits__ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H7l-3 3z"/><path d="M8 9h8M8 12h5"/></svg></span>
+            <h3>Parli con tutti in un tocco</h3>
+            <p>Una comunicazione push agli iscritti attivi: chiusura straordinaria, nuovo corso, open day. Vedi quanti la riceveranno prima di inviarla.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- COME FUNZIONA -->
   <section class="section" id="come">
     <div class="wrap">
@@ -272,6 +338,50 @@
           <p>Si registrano, scelgono la palestra e prenotano la prima lezione.</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--paper" id="faq">
+    <div class="wrap faq">
+      <div class="section__head">
+        <p class="eyebrow">Domande frequenti</p>
+        <h2>Quello che ci chiedono i titolari.</h2>
+      </div>
+      <div class="faq__list">
+        <details class="faq__item reveal">
+          <summary>I miei iscritti devono creare un account?</summary>
+          <p>Sì: si registrano dall'app con email e password, scelgono la palestra e sono subito operativi. Lo staff può anche iscriverli a mano dall'area titolare.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Ho già una lista clienti: posso portarla dentro?</summary>
+          <p>Lo staff crea gli account e assegna gli abbonamenti dall'area titolare; in fase di avvio ti aiutiamo noi a caricare la lista. In qualsiasi momento puoi esportare tutti i clienti in Excel.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Devo cambiare il mio sistema di pagamento?</summary>
+          <p>No. Allenati si collega al tuo account Stripe: gli incassi arrivano direttamente a te, con ricevuta automatica. Chi paga in contanti o in sede resta: lo staff attiva l'abbonamento a mano.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>E se un cliente non ha lo smartphone?</summary>
+          <p>Allenati funziona anche dal browser del computer. In più lo staff può prenotare e gestire l'abbonamento al posto suo.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Posso gestire più sedi?</summary>
+          <p>Sì, da un'unica dashboard. Puoi decidere se i crediti valgono in una sola sede o in tutte le palestre del gruppo, e vedi incassi e prenotazioni per sede.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Le regole valgono anche per chi non aggiorna l'app?</summary>
+          <p>Sì. Limiti settimanali, lista d'attesa, rimborsi e chiusura delle lezioni vuote vivono nel sistema, non nel telefono: valgono per tutti nello stesso momento e non si aggirano.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Quanto ci vuole a partire?</summary>
+          <p>Pochi giorni. Una chiamata per raccogliere corsi, sale, istruttori, piani e orari; la configurazione la facciamo noi e tu la approvi.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Come gestisco i certificati medici?</summary>
+          <p>L'iscritto carica il certificato dall'app indicando la scadenza. Lo staff lo vede nella scheda del cliente e sa sempre chi è in regola e chi no.</p>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -346,6 +456,8 @@
     <small>© <span id="year"></span> Allenati.me</small>
   </div>
 </footer>
+
+<a class="sticky-cta" id="sticky-cta" href="#contatti" aria-hidden="true" tabindex="-1">Richiedi una demo <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 
 <script src="script.js" defer></script>
 </body>

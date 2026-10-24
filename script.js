@@ -144,6 +144,22 @@
     setInterval(nextFeed, 6500);
   }
 
+  // Bottone fisso su mobile: compare dopo l'hero, sparisce vicino al modulo
+  var sticky = document.getElementById('sticky-cta');
+  var heroEl = document.querySelector('.hero');
+  var contactEl = document.getElementById('contatti');
+  if (sticky && heroEl && contactEl && 'IntersectionObserver' in window) {
+    var pastHero = false, nearForm = false;
+    function updateSticky() {
+      var on = pastHero && !nearForm;
+      sticky.classList.toggle('is-on', on);
+      sticky.setAttribute('aria-hidden', on ? 'false' : 'true');
+      sticky.tabIndex = on ? 0 : -1;
+    }
+    new IntersectionObserver(function (en) { pastHero = !en[0].isIntersecting && en[0].boundingClientRect.top < 0; updateSticky(); }, { threshold: 0 }).observe(heroEl);
+    new IntersectionObserver(function (en) { nearForm = en[0].isIntersecting; updateSticky(); }, { threshold: 0.1 }).observe(contactEl);
+  }
+
   // Anno nel footer
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
