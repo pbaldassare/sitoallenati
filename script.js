@@ -1,4 +1,7 @@
 (function () {
+  document.documentElement.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // Menu mobile
   var nav = document.querySelector('.nav');
   var burger = document.querySelector('.burger');
@@ -18,18 +21,61 @@
 
   // Comparsa delle card allo scroll
   var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
     items.forEach(function (el, i) {
-      el.style.transitionDelay = (i % 4) * 60 + 'ms';
+      el.style.transitionDelay = (i % 4) * 70 + 'ms';
       io.observe(el);
     });
   } else {
     items.forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  // Contatori dei numeri
+  var counters = document.querySelectorAll('[data-count]');
+  function fmt(n) { return Math.round(n).toLocaleString('it-IT'); }
+  function countUp(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var dur = 1400, start = null;
+    function step(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(target * eased);
+      if (p < 1) requestAnimationFrame(step); else el.textContent = fmt(target);
+    }
+    requestAnimationFrame(step);
+  }
+  if (counters.length && 'IntersectionObserver' in window && !reduce) {
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { countUp(e.target); cio.unobserve(e.target); }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function (el) { cio.observe(el); });
+  }
+
+  // Voce di menu attiva in base alla sezione visibile
+  var spyLinks = document.querySelectorAll('[data-spy]');
+  if (spyLinks.length && 'IntersectionObserver' in window) {
+    var map = {};
+    spyLinks.forEach(function (a) { map[a.getAttribute('data-spy')] = a; });
+    var sio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        spyLinks.forEach(function (a) { a.classList.remove('is-active'); });
+        var link = map[e.target.id];
+        if (link) link.classList.add('is-active');
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    Object.keys(map).forEach(function (id) {
+      var sec = document.getElementById(id);
+      if (sec) sio.observe(sec);
+    });
   }
 
   // Modulo: apre il client di posta con il messaggio pronto
